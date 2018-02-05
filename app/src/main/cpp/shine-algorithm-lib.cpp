@@ -3,6 +3,8 @@
 #include "NativeAlgorithmBaseSort.h"
 #include "NativeAlgorithmHeapSort.h"
 #include "NativeAlgorithmBinarySearch.h"
+#include "NativeAlgorithmUnionFind.h"
+#include "NativeAlgorithmGraph.h"
 
 extern "C"
 {
@@ -23,6 +25,8 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM* vm, void* reserved)
     NativeAlgorithmBaseSort::registerNatives(env);
     NativeAlgorithmHeapSort::registerNatives(env);
     NativeAlgorithmBinarySearch::registerNatives(env);
+    NativeAlgorithmUnionFind::registerNatives(env);
+    NativeAlgorithmGraph::registerNatives(env);
 
     LogUtils::w("JNI_On_LOAD_Finish");
     return JNI_VERSION_1_6;

@@ -12,7 +12,7 @@ class NativeArrayUtils
 
 public:
     static void swap(int &a, int &b);
-
+    static void showArray(const char* title, int *arr, int count);
 };
 
 

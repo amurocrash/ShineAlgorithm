@@ -23,6 +23,10 @@ add_library( # Sets the name of the library.
              src/main/cpp/NativeAlgorithmHeapSort.cpp
              src/main/cpp/NativeArrayUtils.cpp
              src/main/cpp/NativeAlgorithmBinarySearch.cpp
+             src/main/cpp/NativeAlgorithmUnionFind.cpp
+             src/main/cpp/NativeAlgorithmGraph.cpp
+             src/main/cpp/DenseGraph.cpp
+             src/main/cpp/SparseGraph.cpp
              )
 
 # Searches for a specified prebuilt library and stores the path as a

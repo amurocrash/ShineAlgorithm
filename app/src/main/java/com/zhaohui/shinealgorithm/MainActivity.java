@@ -1,7 +1,7 @@
 package com.zhaohui.shinealgorithm;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.zhaohui.core.algorithm.AlgorithmBaseSort;
 import com.zhaohui.core.algorithm.AlgorithmBinarySearch;
 import com.zhaohui.core.algorithm.AlgorithmHeapSort;
+import com.zhaohui.core.algorithm.AlgorithmUnionFind;
 import com.zhaohui.core.utils.ArrayUtils;
 
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity
 		initBaseSort();
 		initHeapSort();
 		initBinarySearch();
+		initUnionFind();
 	}
 
 	enum BaseSort
@@ -247,5 +249,28 @@ public class MainActivity extends AppCompatActivity
 		});
 	}
 
+	void initUnionFind()
+	{
+		Button button = (Button)findViewById(R.id.bt_go_union_find);
+		button.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+			    new Thread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        AlgorithmUnionFind.unionFindBase();
+                        AlgorithmUnionFind.unionFindPro();
+                        AlgorithmUnionFind.unionFindProBySize();
+                        AlgorithmUnionFind.unionFindProByRank();
+                    }
+                }).start();
+
+			}
+		});
+	}
 
 }
