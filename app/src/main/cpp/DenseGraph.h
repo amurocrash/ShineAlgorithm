@@ -30,6 +30,45 @@ public:
     int hasEdge(int v, int w);
     void addEdge(int v, int w);
 
+    class Iterator
+    {
+    private:
+        DenseGraph& _graph;
+        int vertex;
+        int index;
+
+    public:
+        Iterator(DenseGraph &g, int vertex):_graph(g)
+        {
+            this->vertex = vertex;
+            this->index = 0;
+        }
+
+        int begin()
+        {
+            index = -1;
+            return next();
+        }
+
+        int next()
+        {
+            for(index += 1; index < _graph.graph[vertex].size(); index++)
+            {
+                if(_graph.graph[vertex][index])
+                {
+                    return index;
+                }
+            }
+
+            return -1;
+        }
+
+        bool end()
+        {
+            return index >= _graph.getNumOfVertex();
+        }
+    };
+
 };
 
 

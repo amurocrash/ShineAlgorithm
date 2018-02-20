@@ -18,7 +18,6 @@ SparseGraph::SparseGraph(int numOfVertex, bool isDirected)
 
 SparseGraph::~SparseGraph()
 {
-
 }
 
 int SparseGraph::getNumOfVertex()
@@ -57,7 +56,7 @@ int SparseGraph::hasEdge(int v, int w)
 
 void SparseGraph::addEdge(int v, int w)
 {
-    int hasEdge = hasEdge(v, w);
+    int hasEdge = SparseGraph::hasEdge(v, w);
 
     if(ILLEGAL == hasEdge || HAS_EDGE == hasEdge)
     {
@@ -72,4 +71,15 @@ void SparseGraph::addEdge(int v, int w)
 
     numOfEdge++;
 
+}
+
+void SparseGraph::show()
+{
+    for(int v = 0; v < numOfVertex; v++)
+    {
+        for(int w = 0; w < graph[v].size(); w++)
+        {
+            LogUtils::w("%d, %d", v, graph[v][w]);
+        }
+    }
 }

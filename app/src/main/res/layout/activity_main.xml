@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="go"
+            android:text="base sort go"
             />
 
         <!-- HeapSort -->
@@ -85,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="go"
+            android:text="heap sort go"
             />
 
         <!-- BinarySearch -->
@@ -122,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="go"
+            android:text="binary search go"
             />
 
         <!-- UnionFind -->
@@ -159,7 +159,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="go"
+            android:text="union find go"
+            />
+
+        <!-- Graph -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---------Graph------------"
+            android:layout_gravity="center_horizontal"
+            android:textSize="22sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            />
+
+        <Spinner
+            android:id="@+id/sp_graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/bt_go_graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="graph go"
             />
 
     </LinearLayout>

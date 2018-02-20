@@ -55,12 +55,14 @@ int DenseGraph::hasEdge(int v, int w)
 
 void DenseGraph::addEdge(int v, int w)
 {
-    if(hasEdge(v, w) == ILLEGAL)
+
+    int hasEdge = DenseGraph::hasEdge(v, w);
+    if(hasEdge == ILLEGAL)
     {
         return;
     }
 
-    if(hasEdge(v, w) == HAS_EDGE)
+    if(hasEdge == HAS_EDGE)
     {
         return;
     }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.zhaohui.core.algorithm.AlgorithmBaseSort;
 import com.zhaohui.core.algorithm.AlgorithmBinarySearch;
+import com.zhaohui.core.algorithm.AlgorithmGraph;
 import com.zhaohui.core.algorithm.AlgorithmHeapSort;
 import com.zhaohui.core.algorithm.AlgorithmUnionFind;
 import com.zhaohui.core.utils.ArrayUtils;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity
 		initHeapSort();
 		initBinarySearch();
 		initUnionFind();
+		initGraph();
 	}
 
 	enum BaseSort
@@ -267,6 +269,28 @@ public class MainActivity extends AppCompatActivity
                         AlgorithmUnionFind.unionFindProBySize();
                         AlgorithmUnionFind.unionFindProByRank();
                     }
+                }).start();
+
+			}
+		});
+	}
+
+	void initGraph()
+	{
+		Button button = (Button)findViewById(R.id.bt_go_graph);
+		button.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+			    new Thread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        AlgorithmGraph.test();
+                    }
+
                 }).start();
 
 			}
